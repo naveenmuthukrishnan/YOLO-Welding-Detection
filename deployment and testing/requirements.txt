@@ -1,0 +1,25 @@
+# Local inference on Windows: NVIDIA MX350 (CUDA), Intel GPU / CPU (OpenVINO)
+# Install with:  pip install -r requirements.txt
+
+# CUDA 12.6 PyTorch wheels (the default PyPI torch on Windows is CPU-only)
+--extra-index-url https://download.pytorch.org/whl/cu126
+
+# Keep torch below 2.15: PyTorch stops publishing CUDA 12.6 wheels after 2.14,
+# and Pascal GPUs such as the MX350 have no prebuilt wheels beyond that.
+torch>=2.9,<2.15
+torchvision
+
+# Pinned so the behaviour described in the README stays the same
+ultralytics==8.3.238
+opencv-python
+numpy
+
+# ONNX export and GPU inference
+onnx
+onnxruntime-gpu
+
+# OpenVINO inference (Intel GPU / CPU)
+openvino
+
+# TensorRT is intentionally not listed: the MX350 does not support it.
+# best.engine was built and run on a Colab T4 only.
