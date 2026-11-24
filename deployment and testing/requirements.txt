@@ -1,4 +1,4 @@
-# Local inference on Windows: NVIDIA MX350 (CUDA), Intel GPU / CPU (OpenVINO)
+# Local inference on Windows: NVIDIA MX350 (CUDA), Intel GPU /  CPU (OpenVINO)
 # Install with:  pip install -r requirements.txt
 
 # CUDA 12.6 PyTorch wheels (the default PyPI torch on Windows is CPU-only)
